@@ -1,114 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>セマンティックタグ入門｜サンプル1ページ</title>
-  <meta name="description" content="HTMLのセマンティックタグを使った、初心者向けのシンプルな1ページ例です。header/nav/main/article/section/aside/footer を実地で確認できます。" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セマンティックタグ</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!-- header: ページの先頭でサイト名やロゴ、簡単なナビを配置する領域 -->
-  <header>
-    <div class="container">
-      <div class="title">
-        <!-- SVGは画像の代わりのシンプルなロゴ例（1ファイル完結にするため） -->
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10" fill="#2f6feb" opacity=".15"/>
-          <path d="M6 13l3 3 9-9" fill="none" stroke="#2f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h1>セマンティックタグ入門</h1>
-      </div>
-      <!-- nav: 主要な移動リンクをまとめる。スクリーンリーダーにとってランドマークになる -->
-      <nav aria-label="主要ナビゲーション">
-        <ul>
-          <li><a href="#about">このページの目的</a></li>
-          <li><a href="#what">セマンティックって？</a></li>
-          <li><a href="#example">例で学ぶ</a></li>
-          <li><a href="#tips">用語メモ</a></li>
-          <li><a href="#contact">連絡先</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <h1>セマンティックタグ</h1>
 
-  <!-- main: ページ固有の主内容。基本的に1ページに1つだけ置く -->
-  <main class="container">
-    <!-- article: 単独で成り立つ記事や投稿。見出しと本文、公開日などを含められる -->
-    <article id="about">
-      <header>
-        <h2>このページの目的</h2>
-        <p class="meta">公開: <time datetime="2025-10-10">2025年10月10日</time></p>
-      </header>
-      <p>
-        このサンプルは、<strong>HTMLのセマンティックタグ</strong>（<code>header</code>, <code>nav</code>, <code>main</code>, 
-        <code>article</code>, <code>section</code>, <code>aside</code>, <code>footer</code> など）を使って、
-        誰でも読める<strong>意味のある構造</strong>を作る練習用の1ページです。CSSは最小限にしており、
-        タグの役割がわかりやすい構成にしています。
-      </p>
-      <figure>
-        <!-- 画像の代わりにSVGでプレースホルダー。altテキストで内容を伝えるのが大切 -->
-        <svg role="img" aria-label="セマンティックなページのイメージ" width="100%" height="180" viewBox="0 0 600 180" preserveAspectRatio="none">
-          <rect x="0" y="0" width="600" height="180" fill="#eef2ff" />
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#2f3a66">Placeholder Image</text>
-        </svg>
-        <figcaption>図1: セマンティックなレイアウトのイメージ。画像には意味のある <code>alt</code> を付けましょう。</figcaption>
-      </figure>
-      <section id="what" aria-labelledby="what-heading">
-        <!-- section: 記事内の論理的な区切り。見出しを必ず置くのがポイント -->
-        <h3 id="what-heading">セマンティックって？</h3>
-        <p>
-          「セマンティック（semantic）」は「意味のある」という意味です。タグに役割（意味）を与えると、
-          人にも機械（検索エンジンやスクリーンリーダー）にも理解されやすくなります。例えば、ページの主な内容は
-          <code>&lt;main&gt;</code>、記事は <code>&lt;article&gt;</code>、サイド情報は <code>&lt;aside&gt;</code> のようにします。
-        </p>
-      </section>
-      <section id="example" aria-labelledby="example-heading">
-        <h3 id="example-heading">最小セットで覚えるタグ</h3>
-        <ul>
-          <li><code>&lt;header&gt;</code>: 先頭・導入部分（サイト名、記事タイトル等）</li>
-          <li><code>&lt;nav&gt;</code>: 主なナビゲーションリンク</li>
-          <li><code>&lt;main&gt;</code>: ページの主内容（1ページ1つ）</li>
-          <li><code>&lt;article&gt;</code>: 独立して読める記事・投稿</li>
-          <li><code>&lt;section&gt;</code>: 記事の中の区切り（見出しが必須）</li>
-          <li><code>&lt;aside&gt;</code>: 補足情報（コラム、用語集、広告など）</li>
-          <li><code>&lt;footer&gt;</code>: 著作権表示や連絡先など、末尾の情報</li>
-        </ul>
-      </section>
-      <footer>
-        <!-- article内のfooter: その記事に関する補足（著者・更新情報など） -->
-        <p class="meta">更新: <time datetime="2025-10-10">2025年10月10日</time>・著者: セマンティック入門チーム</p>
-      </footer>
-    </article>
+            <!-- ナビゲーション -->
+            <nav>
+                <ul>
+                    <li><a href="">メニュー1</a></li>
+                    <li><a href="">メニュー2</a></li>
+                    <li><a href="">メニュー3</a></li>
+                    <li><a href="">メニュー4</a></li>
+                    <li><a href="">メニュー5</a></li>
+                    <li><a href="">メニュー6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- aside: 主内容を補助するコラムや用語集。スマホでは下、広い画面では右側に表示 -->
-    <aside id="tips" aria-labelledby="tips-heading">
-      <h2 id="tips-heading">用語ミニメモ</h2>
-      <dl>
-        <dt>ランドマーク</dt>
-        <dd>スクリーンリーダー等が素早く移動できる主要領域（例: <code>main</code>, <code>nav</code>）。</dd>
-        <dt>アクセシビリティ</dt>
-        <dd>障がいの有無に関わらず、誰にでも使いやすくする考え方。</dd>
-        <dt>見出しレベル</dt>
-        <dd><code>h1</code> はページの主見出し、記事内では <code>h2</code> や <code>h3</code> を順序よく使う。</dd>
-      </dl>
-      <p><span class="kbd">Tab</span> キーでリンクに移動できます。<span class="kbd">Enter</span> で決定。</p>
-    </aside>
-  </main>
+    <!-- メイン -->
+    <main id="main">
+        <article>
+            <!-- 記事のヘッダー -->
+            <header>
+                <h2>セマンティックタグについて学習</h2>
+                <p>投稿日: <time datetime="2025-10-10">2025-10-10</time></p>
+            </header>
 
-  <!-- footer: サイト全体のフッター。著作権表示や問い合わせ先など -->
-  <footer>
-    <div class="container inner">
-      <address id="contact">
-        連絡先: <a href="mailto:example@example.com">example@example.com</a>
-      </address>
-      <small>&copy; <time datetime="2025">2025</time> Semantic Sample. All rights reserved.</small>
-    </div>
-  </footer>
+            <!-- 記事の区切り -->
+            <section>
+                <h3>セマンティックの意味とは？</h3>
+                <p>セマンティックというのは、「意味のある」という意味の単語です。</p>
+            </section>
 
-  <!-- 使い方のヒント（学習用のための最小限の補助スクリプト。機能はなくコメントのみ）
-    - 上のナビで各セクションへ移動できます。
-    - タグの役割はそれぞれコメントでも説明しています。
-    - まずはタグの位置関係（header/nav/main/article/aside/footer）を目で追ってみましょう。
-  -->
+            <!-- 記事の区切り -->
+            <section>
+                <h3>主要なセマンティックタグ</h3>
+                <ul>
+                    <li>header</li>
+                    <li>nav</li>
+                    <li>main</li>
+                    <li>article</li>
+                    <li>section</li>
+                    <li>footer</li>
+                </ul>
+            </section>
+
+            <!-- 記事のフッター -->
+            <footer>
+                <p>この記事はセマンティックタグの基本を紹介しました。</p>
+            </footer>
+        </article>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <address>
+                <p>お問い合わせ: <a href="mailto:hasegawa@example.com">hasegawa@example.com</a></p>
+            </address>
+            <p>&copy; 2025 セマンティックタグ学習サイト</p>
+        </div>
+    </footer>
 </body>
+
 </html>
